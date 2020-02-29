@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,12 +8,17 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <title>Pricing example for Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
 
-    <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="pricing.css" rel="stylesheet">
@@ -40,47 +46,47 @@
     <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Free</h4>
+                <h4 class="my-0 font-weight-normal"> - </h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">Warkocze</small></h1>
+                <h1 class="card-title pricing-card-title">Warkocze</h1>
                 <ul class="list-unstyled mt-3 mb-4">
                     <li>czas zakładania: 6h</li>
                     <li>czas noszenia: 2 miesiące</li>
-                    <li>kolory</li>
-                    <li>długości</li>
+                    <li>różne kolory</li>
+                    <li>różne długości</li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary">WIĘCEJ</button>
             </div>
         </div>
         <div class="card mb-4 box-shadow">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Pro</h4>
+                <h4 class="my-0 font-weight-normal"> - </h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                <h1 class="card-title pricing-card-title">Dready / Dreadloki</h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>20 users included</li>
-                    <li>10 GB of storage</li>
-                    <li>Priority email support</li>
-                    <li>Help center access</li>
+                    <li>czas wykonania: 1 - 8h</li>
+                    <li>czas noszenia: 2 miesiące/ bez limitu</li>
+                    <li>różne kolory</li>
+                    <li>naturalne lub sztuczne</li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary">WIĘCEJ</button>
             </div>
         </div>
         <div class="card mb-4 box-shadow">
             <div class="card-header">
-                <h4 class="my-0 font-weight-normal">Enterprise</h4>
+                <h4 class="my-0 font-weight-normal"> - </h4>
             </div>
             <div class="card-body">
-                <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                <h1 class="card-title pricing-card-title">Afroloki</h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                    <li>30 users included</li>
-                    <li>15 GB of storage</li>
-                    <li>Phone and email support</li>
-                    <li>Help center access</li>
+                    <li>czas wykoniania: 4h</li>
+                    <li>czas noszenia: 2 miesiące</li>
+                    <li>różne kolory</li>
+                    <li>różne typy skrętu</li>
                 </ul>
-                <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                <button type="button" class="btn btn-lg btn-block btn-primary">WIĘCEJ</button>
             </div>
         </div>
     </div>
