@@ -24,7 +24,7 @@
             $(this).val(picker.startDate.format('DD/MM/YYYY'));
     
         });
-    
+
         $('.js-btn-calendar').on('click',function(e){
             e.stopPropagation();
     
@@ -32,7 +32,8 @@
             else if(isClick === 0) isClick = 1;
     
             if (isClick === 1) {
-                myCalendar.focus();
+                $(e.currentTarget).prev().focus();
+                //myCalendar.focus();
             }
         });
     
