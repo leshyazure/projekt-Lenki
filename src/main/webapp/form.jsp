@@ -17,7 +17,8 @@
     <link href="vendor/mdi-font/css/material-design-iconic-font.css" rel="stylesheet" media="all">
     <link href="vendor/font-awesome-4.7/css/font-awesome.css" rel="stylesheet" media="all">
     <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
 
     <!-- Vendor CSS-->
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
@@ -33,18 +34,20 @@
         <div class="card card-3">
             <div class="card-heading"></div>
             <div class="card-body">
-                <h2 class="title">Registration Info</h2>
+                <h2 class="title">Rezerwuj wizytę</h2>
                 <form method="POST">
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Name" name="name">
+                        <input class="input--style-3" type="text" placeholder="Imię i nazwisko" name="name">
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3 js-datepicker" type="text" placeholder="Birthdate" name="birthday">
-                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        <input class="input--style-3" type="email" placeholder="Email" name="email">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Telefon" name="phone">
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="usluga">
+                            <select name="usługa">
                                 <option disabled="disabled" selected="selected">Wybierz usługę</option>
                                 <option>Warkocze</option>
                                 <option>Dredy</option>
@@ -54,13 +57,22 @@
                         </div>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3" type="email" placeholder="Email" name="email">
+                        <input class="input--style-3 js-datepicker" type="text" placeholder="Wybierz datę od:"
+                               name="dateFrom">
+                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                     </div>
                     <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Phone" name="phone">
+                        <input class="input--style-3 js-datepicker" type="text" placeholder="Wybierz datę do:"
+                               name="dateTo">
+                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                     </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Dodaj wiadomość:" name="message">
+                        <textarea name="comments" id="commentsText" rows="10" cols="30" class="required requiredField"></textarea>
+                    </div>
+
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                        <button class="btn btn--pill btn--green" type="submit">REZERWUJ</button>
                     </div>
                 </form>
             </div>
