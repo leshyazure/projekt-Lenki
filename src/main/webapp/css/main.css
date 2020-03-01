@@ -162,7 +162,7 @@ h6 {
    #BACKGROUND
    ========================================================================== */
 .bg-blue {
-  background: #2c6ed5;
+  background: #ad3fd5;
 }
 
 .bg-red {
@@ -252,19 +252,19 @@ h6 {
   border-radius: 20px;
 }
 
-.btn--green {
-  background: #57b846;
+.btn--pink {
+  background: #b85c7e;
 }
 
-.btn--green:hover {
-  background: #4dae3c;
+.btn--pink:hover {
+  background: #ae345f;
 }
 
 /* ==========================================================================
    #DATE PICKER
    ========================================================================== */
 td.active {
-  background-color: #2c6ed5;
+  background-color: #b85c7e;
 }
 
 input[type="date" i] {

@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="p-t-10">
-                        <button class="btn btn--pill btn--green" type="submit">REZERWUJ</button>
+                        <button class="btn btn--pill btn--pink" type="submit">REZERWUJ</button>
                     </div>
                 </form>
             </div>
