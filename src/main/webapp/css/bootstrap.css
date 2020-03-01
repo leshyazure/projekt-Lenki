@@ -4462,8 +4462,7 @@ tbody.collapse.show {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
-}
-
+  /*background: url("../images/background.jpg") top left/cover no-repeat;*/
 .card-title {
   margin-bottom: 0.75rem;
 }
@@ -4734,13 +4733,13 @@ tbody.collapse.show {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
+  color: #ae345f;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
-  color: #0056b3;
+  color: #ae345f;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -4749,7 +4748,7 @@ tbody.collapse.show {
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(173, 63, 213, 0.25);
 }
 
 .page-link:not(:disabled):not(.disabled) {
@@ -4770,8 +4769,8 @@ tbody.collapse.show {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #ae345f;
+  border-color: #ae345f;
 }
 
 .page-item.disabled .page-link {
@@ -4843,13 +4842,13 @@ tbody.collapse.show {
 
 .badge-primary {
   color: #fff;
-  background-color: #007bff;
+  background-color: #ae345f;
 }
 
 .badge-primary[href]:hover, .badge-primary[href]:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #0062cc;
+  background-color: #ae345f;
 }
 
 .badge-secondary {
@@ -8950,6 +8949,11 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    background-size: 100% 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
   }
   .container {
     min-width: 992px !important;

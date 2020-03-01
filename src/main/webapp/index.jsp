@@ -16,7 +16,12 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <title>Pricing example for Bootstrap</title>
-
+<style>
+    body {
+        background-image: url("images/background.jpg");
+        background-repeat: no-repeat;
+    }
+</style>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
 
 
