@@ -68,7 +68,7 @@
                     </div>
                     <div class="input-group">
                         <input class="input--style-3" type="text" placeholder="Dodaj wiadomość:" name="message">
-                        <textarea name="comments" id="commentsText" rows="10" cols="30" class="required requiredField"></textarea>
+                        <textarea name="comments" id="commentsText" rows="10" cols="30" class="required requiredField" style="min-width: 100%"></textarea>
                     </div>
 
                     <div class="p-t-10">
