@@ -37,6 +37,8 @@
     <%--    </nav>--%>
     <a class="btn btn-outline-primary" href="form.jsp">REZERWUJ WIZYTĘ</a>
 
+
+
 </div>
 
 <div>
