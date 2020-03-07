@@ -1,8 +1,8 @@
-####Pokaż najbliższe 10 zdarzeń z kalendarza
+###Pokaż najbliższe 10 zdarzeń z kalendarza
 
 * <b>localhost:8080/show</b>
 
-####Dodaj zdarzenie do kalendarza:
+###Dodaj zdarzenie do kalendarza:
 
 * <b>localhost:8080/add</b>
 
