@@ -45,24 +45,27 @@ public class EmailSendingServlet extends HttpServlet {
 
         String subject = "Rezerwacja [" + serviceType + "] " + name + " " + dateFrom + " - " + dateTo;
 
-        String content = "<p>" + name + "</p>"
-                + "<p>" + replyTo + "</p>"
-                + "<p>" + phone + "</p>"
-                + "<p>" + serviceType + "</p>"
-                + "<p>" + dateFrom + "</p>"
-                + "<p>" + dateTo + "</p>"
-                + "<p>" + additionalMessage + "</p>";
-
+        String content = "<html><head><meta charset=\"utf-8\\\"></head>\n" +
+                "<body style=\"background-color: #1d2124; color: white; font-family: Candara; min-height: 100%\">\n" +
+                "<div style=\"margin-left: 20px; margin-top: 20px; font-size: 16px;\">\n" +
+                "<p style=\"font-size: 18px;\"><b> " + name + " </b></p>\n" +
+                "<p style=\"font-size: 14px; color: aquamarine;\">email:  " + replyTo + "</p>\n" +
+                "<p>tel. <a style=\"font-family: Arial; text-decoration-line: none; font-weight: normal; " +
+                "color: aquamarine;\" href=\"tel:" + phone + "\"><span style=\"font-size: 20px;\">" + phone +
+                "</span></a></p>\n<p>usługa:  " + serviceType + "  </p>\n<p>termin od  " +
+                "<span style=\"font-size: 20px; color: aquamarine;\">" + dateFrom + "</span>  do\n" +
+                "<span style=\"font-size: 20px; color: aquamarine;\">"  + dateTo + "</span></p>\n" +
+                "<p>wiadomość: " + additionalMessage + "</p></div></body></html>";
 
         String resultMessage = "";
 
         try {
             EmailUtility.sendEmail(host, port, user, pass, recipient, replyTo, name, subject,
                     content);
-            resultMessage = "The e-mail was sent successfully";
+            resultMessage = "Wiadomość została wysłana";
         } catch (Exception ex) {
             ex.printStackTrace();
-            resultMessage = "There were an error: " + ex.getMessage();
+            resultMessage = "Błąd wysyłania: " + ex.getMessage();
         } finally {
             request.setAttribute("Message", resultMessage);
             getServletContext().getRequestDispatcher("/Result.jsp").forward(

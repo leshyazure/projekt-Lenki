@@ -1,0 +1,133 @@
+body {
+    font-size: 15px;
+    font-family: Candara;
+    background-color: #1d2124;
+    color: white;
+}
+
+.logo {
+    background-image: url("/images/background.jpg");
+}
+
+.phone {
+    font-size: 40px;
+    font-family: "Arial";
+    color: #006895;
+    border: #006895 solid 3px;
+    border-radius: 50px;
+    background-color: #1d2124;
+
+    padding-right: 22px;
+}
+
+.phone:hover {
+    font-size: 40px;
+    font-family: "Arial";
+    color: aquamarine;
+    border: aqua solid 6px;
+    border-radius: 50px;
+    background-color: #1d2124;
+
+    padding-right: 22px;
+}
+
+.hair-list {
+    margin-top: 20px;
+}
+
+a:visited, a:active, a:link {
+    font-weight: normal;
+    color: #b3d7ff;
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration-line: none;
+    color: aquamarine;
+}
+
+hr.footer-line {
+    border-top: 2px solid #3a526b;
+}
+
+.address {
+    color: #006895;
+    text-align: center;
+}
+
+
+.carousel-control {
+    padding-top: 10%;
+    width: 5%;
+}
+
+.info {
+    font-size: 12px;
+    font-family: Candara;
+    color: #6c757d;
+}
+
+.desc-name {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Candara;
+    color: #bed7ff;
+}
+
+.desc-text {
+    font-size: 15px;
+    font-family: Candara;
+    color: #3f729b;
+}
+
+.desc-const {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Candara;
+    color: #bed7ff;
+}
+
+.fakeimg {
+    padding-top: 150px;
+    text-align: center;
+    height: 230px;
+    background: #444;
+}
+
+.fakeimg-home {
+    padding-top: 120px;
+    text-align: center;
+    height: 230px;
+    background: #444;
+}
+
+.fakeimg-thumb {
+    padding-top: 90px;
+    text-align: center;
+    height: 100px;
+    background: #444;
+}
+
+@media (min-width: 992px) {
+    .fakeimg {
+        padding-top: 150px;
+        text-align: center;
+        height: 150px;
+        background: #444;
+    }
+
+    .fakeimg-home {
+        padding-top: 60px;
+        text-align: center;
+        height: 150px;
+        background: #444;
+    }
+
+    .fakeimg-thumb {
+        padding-top: 90px;
+        text-align: center;
+        height: 80px;
+        background: #444;
+    }
+
+}
