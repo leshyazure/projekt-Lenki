@@ -1,6 +1,6 @@
 body {
     font-size: 15px;
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     background-color: #1d2124;
     color: white;
 }
@@ -15,7 +15,7 @@ body {
 
 .phone {
     font-size: 40px;
-    font-family: "Arial";
+    font-family: "Arial", sans-serif;
     color: #006895;
     border: #006895 solid 3px;
     border-radius: 50px;
@@ -26,7 +26,7 @@ body {
 
 .phone:hover {
     font-size: 40px;
-    font-family: "Arial";
+    font-family: "Arial", sans-serif;
     color: aquamarine;
     border: aqua solid 6px;
     border-radius: 50px;
@@ -67,27 +67,27 @@ hr.footer-line {
 
 .info {
     font-size: 12px;
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     color: #6c757d;
 }
 
 .desc-name {
     font-size: 28px;
     font-weight: bold;
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     color: #bed7ff;
 }
 
 .desc-text {
     font-size: 15px;
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     color: #3f729b;
 }
 
 .desc-const {
     font-size: 18px;
     font-weight: bold;
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     color: #bed7ff;
 }
 
