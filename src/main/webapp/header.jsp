@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Koltuneria Artystyczna</title>
+    <title>Koltuneria Artystyczna - Studio alternatywnych fryzur</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -24,12 +24,9 @@
 </head>
 <body>
 <div class="logo">
-    <div class="d-inline-block mx-auto">
-        <a href="index.php?id=glowna">
-            <h1>[ Kołtuneria Artystyczna ]</h1>
-            <p class="info">[ miejsce na logo na całej szerokości pola ]</p>
-        </a>
-    </div>
-    <a href="index.php?id=rezerwuj" class="btn btn-lg btn-primary d-inline-block mt-5 mr-xl-5 float-sm-right"><i
-            class="fa fa-calendar-check-o"></i> Rezerwuj</a>
+
+    <div class="mr-5 float-right" style="margin-top: 200px"><a href="reservation.jsp" class="btn btn-lg btn-primary d-inline">
+        <i class="fa fa-calendar-check-o"></i> Rezerwuj</a></div>
+  
+
 </div>

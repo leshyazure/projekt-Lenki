@@ -9,28 +9,28 @@
 <div class="container mt-5 mt-lg-5">
     <div class="row">
         <div class="col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mx-lg-3 my-1 text-center hair-list">
-            <a href="index.php?id=warkoczyki">
+            <a href="warkoczyki.jsp">
                 <div class="fakeimg-home">[ Zdjęcie ]</div>
                 <p class="hair-list">Warkoczyki <br>afrykańskie
                 </p></a>
         </div>
         <div class="col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mx-lg-3 my-1 text-center hair-list">
-            <a href="index.php?id=dready">
+            <a href="dready.jsp">
                 <div class="fakeimg-home">[ Zdjęcie ]</div>
                 <p class="hair-list">Dready / <br>Dreadloki</p></a>
         </div>
         <div class="col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mx-lg-3 my-1 text-center hair-list">
-            <a href="index.php?id=afroloki">
+            <a href="afroloki.jsp">
                 <div class="fakeimg-home">[ Zdjęcie ]</div>
                 <p class="hair-list">Afroloki</p></a>
         </div>
         <div class="col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mx-lg-3 my-1 text-center hair-list">
-            <a href="index.php?id=cornrows">
+            <a href="cornrows.jsp">
                 <div class="fakeimg-home">[ Zdjęcie ]</div>
                 <p class="hair-list">Cornrows</p></a>
         </div>
         <div class="col-9 col-sm-6 col-md-4 col-lg-3 col-xl-2 mx-auto mx-lg-3 my-1 text-center hair-list">
-            <a href="index.php?id=boxbraids">
+            <a href="boxbraids.jsp">
                 <div class="fakeimg-home">[ Zdjęcie ]</div>
                 <p class="hair-list">Boxbraids /<br>kuce</p></a>
         </div>
