@@ -38,7 +38,7 @@
     <p class="info text-center">[tylko miniatury, cała dostępna po klinknięciu w napis lub dowolne zdjęcie]</p>
     <div href="gallery"><p class="text-center"> Galeria: <br></p>
         <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-            <div class="carousel-inner w-100" role="listbox">
+            <div class="carousel-inner w-100" role="listbox"> // tutaj dodaj zdjęciado galerii
                 <div class="carousel-item row no-gutters active">
                     <div class="col-2 float-left"><img class="img-fluid" src="img/1.jpg"></div>
                     <div class="col-2 float-left"><img class="img-fluid" src="img/2.jpg"></div>
@@ -72,6 +72,6 @@
 </div>
 <script>
     $('.carousel').carousel({
-        interval: 5000
+        interval: 3000
     })
 </script>
