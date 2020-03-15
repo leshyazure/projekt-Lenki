@@ -47,10 +47,6 @@
                     </div>
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <%--
-                                 nie stosujcie polskich znaków w nazwach parametrów, może teraz to już lepiej wszystko działa,
-                                 ale na starszych przeglądarkach może rzucać błędami
-                                 <select name="usługa"> --%>
                             <select name="serviceType">
                                 <option disabled="disabled" selected="selected">Wybierz usługę</option>
                                 <option>Warkocze</option>

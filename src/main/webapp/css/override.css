@@ -111,6 +111,112 @@ hr.footer-line {
     height: 100px;
     background: #444;
 }
+.dates {
+    margin-top: 20px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.date-range {
+    margin: auto;
+    text-align: center;
+}
+
+.date-range > div {
+    display: inline-block;
+    margin: 10px;
+}
+
+p {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+.is-selected {
+    background-color: #286090;
+    color: white;
+}
+
+.is-selected:hover {
+    background-color: #204d74 !important;
+}
+
+.is-between {
+    border-radius: 0 !important;
+    background-color: #5599d4;
+    color: white;
+}
+
+.is-between:hover {
+    background-color: #204d74 !important;
+}
+
+.date-from-picker .active,
+.date-to-picker .is-selected {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.date-to-picker .active,
+.date-from-picker .is-selected {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.disabled {
+    color: #d8d8d8 !important;
+}
+.datepicker table tr td {
+    border-radius: 10px;
+}
+
+label {
+    margin: 5px 50px;
+    padding: 0 10px;
+    /*float: left;*/
+    font-family: Candara;
+    color: purple;
+}
+
+input[type=text] {
+    background-color: #1b1e21;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    color: fuchsia;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid darkmagenta;
+    border-radius: 15px;
+}
+
+button {
+    background-color: #1b1e21;
+    /*width: 80%;*/
+    padding: 10px 20px;
+    margin: 20px 0 0 70px;
+    color: fuchsia;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    border: 3px solid orchid;
+    border-radius: 15px;
+}
+
+select {
+    background-color: #1b1e21;
+    width: 80%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    color: fuchsia;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid darkmagenta;
+    border-radius: 15px;
+}
 
 @media (min-width: 992px) {
     .fakeimg {
