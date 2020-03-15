@@ -27,11 +27,11 @@
 </p>
     <div class="row">
         <form class="form-inline" action="EmailSendingServlet" method="POST">
-            <div class="col-9 col-lg-4 my-1 text-center form-group">
+            <div class="col-12 col-lg-4 my-1 text-center form-group">
                 <input id="name" class="input--style-3" type="text" placeholder="Imię i nazwisko" name="name">
                 <input class="input--style-3" type="text" placeholder="Email" name="email">
                 <input class="input--style-3" type="text" placeholder="Telefon" name="phone">
-                <div class="my-2 select-service" style="width:80%;">
+                <div class="my-2 mx-auto mx-lg-0 select-service" style="width:80%;">
                     <select name="serviceType">
                         <option disabled="disabled" selected="selected">Wybierz usługę</option>
                         <option>Warkocze</option>
@@ -48,8 +48,8 @@
                 <p class="range-text">Wybierz zakres od i do:</p>
 
                 <div class="date-range">
-                    <div class="date-from-picker col-9 col-lg-4 my-1 d-inline-block ml-0 mr-5"></div>
-                    <div class="date-to-picker col-9 col-lg-4 my-1 d-inline-block mx-5"></div>
+                    <div class="date-from-picker col-12 col-lg-4 my-lg-1 d-lg-inline-block mx-5 px-5 px-lg-0 ml-lg-0 mr-lg-5"></div>
+                    <div class="date-to-picker col-12 col-lg-4 my-lg-1 d-lg-inline-block mx-5 my-4 mx-lg-5 px-5 px-lg-0"></div>
                 </div>
                 <p>
                     <a class="button" href="#" role="button">

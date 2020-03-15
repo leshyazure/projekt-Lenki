@@ -240,7 +240,7 @@ input[type=text]:hover {
     /*background-color: #571372;*/
     /*width: 80%;*/
     padding: 10px 20px;
-    margin: 10px 20px 60px 100px;
+    margin: 10px 40px 40px 40px;
     color: fuchsia;
     float: left;
     text-align: center;
@@ -383,6 +383,20 @@ select {
 }
 
 @media (min-width: 992px) {
+    .button {
+        background-color: #1b1e21;
+        /*background-color: #571372;*/
+        /*width: 80%;*/
+        padding: 10px 20px;
+        margin: 10px 20px 60px 100px;
+        color: fuchsia;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        border: 2px solid darkmagenta;
+        border-radius: 15px;
+    }
+
     .fakeimg {
         padding-top: 150px;
         text-align: center;
