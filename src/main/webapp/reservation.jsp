@@ -23,32 +23,36 @@
         <i class="fa fa-calendar-check-o"></i> Rezerwuj</a></div>
 </div>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-12 mx-auto mx-lg-3 my-1 text-center"><h2 class="title">Rezerwuj wizytę</h2></div>
-    </div>
+<p class="text-center reservation-title">Zarezerwuj termin wizyty
+</p>
     <div class="row">
         <form class="form-inline" action="EmailSendingServlet" method="POST">
-            <div class="col-9 col-lg-3 my-1 text-center form-group">
+            <div class="col-9 col-lg-4 my-1 text-center form-group">
                 <input id="name" class="input--style-3" type="text" placeholder="Imię i nazwisko" name="name">
                 <input class="input--style-3" type="text" placeholder="Email" name="email">
                 <input class="input--style-3" type="text" placeholder="Telefon" name="phone">
-                <select name="serviceType">
-                    <option disabled="disabled" selected="selected">Wybierz usługę</option>
-                    <option>Warkocze</option>
-                    <option>Dredy, dreadloki</option>
-                    <option>Afroloki</option>
-                    <option>Cornrows</option>
-                    <option>Boxbraids, kuce</option>
-                </select>
+                <div class="my-2 select-service" style="width:80%;">
+                    <select name="serviceType">
+                        <option disabled="disabled" selected="selected">Wybierz usługę</option>
+                        <option>Warkocze</option>
+                        <option>Dredy</option>
+                        <option>Dreadloki</option>
+                        <option>Afroloki</option>
+                        <option>Cornrows</option>
+                        <option>Boxbraids</option>
+                        <option>Kuce</option>
+                    </select>
+                </div>
             </div>
             <div class="dates">
-                <h1>Wybierz zakres od i do:</h1>
+                <p class="range-text">Wybierz zakres od i do:</p>
+
                 <div class="date-range">
-                    <div class="date-from-picker"></div>
-                    <div class="date-to-picker"></div>
+                    <div class="date-from-picker col-9 col-lg-4 my-1 d-inline-block ml-0 mr-5"></div>
+                    <div class="date-to-picker col-9 col-lg-4 my-1 d-inline-block mx-5"></div>
                 </div>
                 <p>
-                    <a class="btn btn-success" href="#" role="button">
+                    <a class="button" href="#" role="button">
                         Szukaj wolnych terminów od <span id="display-date-from"></span>
                         do <span id="display-check-to"></span>
                     </a>
@@ -77,7 +81,7 @@
         todayHighlight: true,
         daysOfWeekDisabled: "0,6",
         autoclose: false,
-        beforeShowDay: function(date) {
+        beforeShowDay: function (date) {
             if (date_to !== undefined) {
                 // disabled date selection for day after checkout date
                 if (date > date_to) {
@@ -133,7 +137,7 @@
         todayHighlight: true,
         daysOfWeekDisabled: "0,6",
         autoclose: false,
-        beforeShowDay: function(date) {
+        beforeShowDay: function (date) {
             if (date_from !== undefined) {
                 // disabled date selection for day before checkin date
                 if (date < date_from) {
@@ -183,5 +187,91 @@
         update();
     });
 
+
+    let x, i, j, selElmnt, a, b, c;
+    /* Look for any elements with the class "custom-select": */
+    x = document.getElementsByClassName("select-service");
+    for (i = 0; i < x.length; i++) {
+        selElmnt = x[i].getElementsByTagName("select")[0];
+        /* For each element, create a new DIV that will act as the selected item: */
+        a = document.createElement("DIV");
+        a.setAttribute("class", "select-selected");
+        a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+        x[i].appendChild(a);
+        /* For each element, create a new DIV that will contain the option list: */
+        b = document.createElement("DIV");
+        b.setAttribute("class", "select-items select-hide");
+        for (j = 1; j < selElmnt.length; j++) {
+            /* For each option in the original select element,
+            create a new DIV that will act as an option item: */
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+                /* When an item is clicked, update the original select box,
+                and the selected item: */
+                var y, i, k, s, h;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < s.length; i++) {
+                    if (s.options[i].innerHTML == this.innerHTML) {
+                        s.selectedIndex = i;
+                        h.innerHTML = this.innerHTML;
+                        y = this.parentNode.getElementsByClassName("same-as-selected");
+                        for (k = 0; k < y.length; k++) {
+                            y[k].removeAttribute("class");
+                        }
+                        this.setAttribute("class", "same-as-selected");
+                        break;
+                    }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+        }
+        x[i].appendChild(b);
+        a.addEventListener("click", function (e) {
+            /* When the select box is clicked, close any other select boxes,
+            and open/close the current select box: */
+            e.stopPropagation();
+            closeAllSelect(this);
+            let element = document.getElementsByClassName("select-service");
+            element[0].classList.toggle("expanded");
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+        });
+    }
+
+    function closeAllSelect(elmnt) {
+        /* A function that will close all select boxes in the document,
+        except the current select box: */
+        var x, y, i, arrNo = [];
+        x = document.getElementsByClassName("select-items");
+        y = document.getElementsByClassName("select-selected");
+        for (i = 0; i < y.length; i++) {
+            if (elmnt == y[i]) {
+                arrNo.push(i)
+            } else {
+                y[i].classList.remove("select-arrow-active");
+            }
+        }
+        for (i = 0; i < x.length; i++) {
+            if (arrNo.indexOf(i)) {
+                x[i].classList.add("select-hide");
+            }
+        }
+    }
+
+    /* If the user clicks anywhere outside the select box,
+    then close all select boxes: */
+    document.addEventListener("click", closeAllSelect);
+
+    // Reset class to plain "select-service" when click out of select box
+    // This should repair styling errors on lost focus
+    $(window).click(function() {
+        let element = document.getElementsByClassName("select-service");
+        if (element[0].classList.contains("expanded")) {
+            element[0].classList.remove("expanded");
+        }
+    });
 </script>
 <jsp:include page="footer.jsp"/>

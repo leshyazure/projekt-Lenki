@@ -124,10 +124,15 @@ h1 {
     margin: auto;
     text-align: center;
 }
+.reservation-title {
+    font-size: 25px;
+    color: #720e9e;
+}
 
-.date-range > div {
-    display: inline-block;
-    margin: 10px;
+.range-text {
+    text-align: center;
+    font-size: 20px;
+    color: #8531a7;
 }
 
 p {
@@ -136,28 +141,51 @@ p {
 }
 
 .is-selected {
-    background-color: #286090;
+    background-color: darkorchid;
     color: white;
 }
 
 .is-selected:hover {
-    background-color: #204d74 !important;
+    background-color: orchid !important;
 }
 
 .is-between {
-    border-radius: 0 !important;
-    background-color: #5599d4;
+    border-radius: 0;
+    background-color: mediumorchid;
     color: white;
 }
 
 .is-between:hover {
-    background-color: #204d74 !important;
+    background-color: orchid !important;
+}
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active:active {
+    background-color: darkorchid;
+}
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today[disabled].focus,
+.datepicker table tr td.today[disabled]:focus,
+.datepicker table tr td.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today.focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+fieldset[disabled] .datepicker table tr td.today:hover {
+    background-color: hotpink;
 }
 
+.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus, .datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus, .datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover, .datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus, .datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus, .datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover {
+    background-color: orchid;
+}
 .date-from-picker .active,
 .date-to-picker .is-selected {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+}
+.datepicker table tr td.day:hover, .datepicker table tr td.focused {
+    background: blueviolet;
 }
 
 .date-to-picker .active,
@@ -167,17 +195,26 @@ p {
 }
 
 .disabled {
-    color: #d8d8d8 !important;
+    color: #989898 !important;
 }
 .datepicker table tr td {
     border-radius: 10px;
 }
-
+.datepicker table tr td.is-between {
+    border-radius: 0;
+}
+.datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:active,
+.datepicker table tr td.today.is-between{
+    background: deeppink;
+    color: #777;
+    border: deeppink 0 solid;
+    border-radius: 10px;
+}
 label {
     margin: 5px 50px;
     padding: 0 10px;
     /*float: left;*/
-    font-family: Candara;
+    font-family: Candara, sans-serif;
     color: purple;
 }
 
@@ -192,18 +229,33 @@ input[type=text] {
     border: 2px solid darkmagenta;
     border-radius: 15px;
 }
+input[type=text]:hover {
+    border: 2px solid royalblue;
+    color: deepskyblue;
+}
 
-button {
+.button {
     background-color: #1b1e21;
+    /*background-color: #571372;*/
     /*width: 80%;*/
     padding: 10px 20px;
-    margin: 20px 0 0 70px;
+    margin: 10px 20px 60px 100px;
     color: fuchsia;
     float: left;
     text-align: center;
     box-sizing: border-box;
-    border: 3px solid orchid;
+    border: 2px solid darkmagenta;
     border-radius: 15px;
+}
+a.button:visited, a.button:active, a.button:link {
+    font-weight: normal;
+    color: magenta;
+}
+
+a.button:hover {
+    text-decoration-line: none;
+    border: 2px solid royalblue;
+    color: deepskyblue;
 }
 
 select {
@@ -216,6 +268,117 @@ select {
     box-sizing: border-box;
     border: 2px solid darkmagenta;
     border-radius: 15px;
+}
+/* The container must be positioned relative: */
+.select-service {
+    position: relative;
+    font-family: Candara, sans-serif;
+    border: 2px solid darkmagenta;
+    border-radius: 15px;
+}
+
+.select-service select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #1b1e21;
+    border-radius: 15px;
+    color: purple;
+}
+.select-selected.select-arrow-active {
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+}
+
+.select-service.expanded {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    border-color: royalblue;
+    color: cornflowerblue;
+}
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: fuchsia transparent transparent transparent;
+}
+.select-selected:hover::after {
+    position: absolute;
+    content: "";
+    top: 17px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: royalblue transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent royalblue transparent;
+    top: 10px;
+}
+
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: purple;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+.select-items div, .select-selected:focus {
+    color: darkslateblue;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #1b1e21;
+    top: 100%;
+    left: -1.5px;
+    right: -1.5px;
+    z-index: 99;
+    border: 2px solid royalblue;
+    border-radius: 15px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+.select-items:hover {
+    border-color: royalblue;
+}
+.select-service:hover {
+    border-color: royalblue;
+}
+.select-selected.select-arrow-active:hover {
+    color: #0f4bac;
+}
+.select-selected.select-arrow-active {
+    color: royalblue;
+}
+.select-selected:hover {
+    border-color: royalblue;
+    color: deepskyblue;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: deepskyblue;
 }
 
 @media (min-width: 992px) {
